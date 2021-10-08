@@ -1,6 +1,7 @@
 ---
 - name: Create a change request
-  servicenow.servicenow.snow_record:
+#  servicenow.servicenow.snow_record:
+  servicenow.itsm.change_request:
     state: present
     table: change_request
     username: "{{ snow_credentials.username | default(snow_username, true)}}"
